@@ -173,3 +173,204 @@ order: 1;
 
 **Horizontal → `justify-content`**
 **Vertical → `align-items`**
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+La idea es esta:
+**HTML = estructura (las partes de la página)**
+**CSS = estilo (cómo se ven esas partes)**
+# 1. Crear secciones en HTML
+
+En HTML puedes dividir tu página usando etiquetas como:
+```html
+<header></header>
+<nav></nav>
+<section></section>
+<article></article>
+<aside></aside>
+<footer></footer>
+```
+
+Ejemplo simple:
+
+```html
+<header>
+    <h1>Mi página</h1>
+</header>
+
+<nav>
+    <ul>
+        <li>Inicio</li>
+        <li>Servicios</li>
+        <li>Contacto</li>
+    </ul>
+</nav>
+
+<section>
+    <h2>Contenido principal</h2>
+    <p>Texto de la página</p>
+</section>
+
+<footer>
+    <p>Derechos reservados</p>
+</footer>
+```
+
+Esto divide la página en partes.
+
+---
+
+# 2. Cómo usar CSS con esas secciones
+
+En CSS solo llamas **el nombre de la etiqueta**.
+
+```css
+header{
+    background: lightblue;
+}
+
+nav{
+    background: gray;
+}
+
+section{
+    padding: 20px;
+}
+
+footer{
+    background: black;
+    color: white;
+}
+```
+
+---
+
+# 3. Usar `class` para secciones específicas
+
+A veces necesitas **varias secciones diferentes**, entonces usas `class`.
+
+HTML:
+
+```html
+<section class="productos">
+    <h2>Productos</h2>
+</section>
+
+<section class="contacto">
+    <h2>Contacto</h2>
+</section>
+```
+
+CSS:
+
+```css
+.productos{
+    background: pink;
+}
+
+.contacto{
+    background: lightgreen;
+}
+```
+
+El **punto `.` significa class**.
+
+---
+
+# 4. Usar `id` para una sección única
+
+HTML:
+
+```html
+<section id="inicio">
+    <h2>Bienvenido</h2>
+</section>
+```
+
+CSS:
+
+```css
+#inicio{
+    background: yellow;
+}
+```
+
+El **`#` significa id**.
+
+---
+
+# 5. Ejemplo completo (muy típico en exámenes)
+
+HTML:
+
+```html
+<body>
+
+<header>
+    <h1>Mi sitio</h1>
+</header>
+
+<nav>
+    <ul>
+        <li>Inicio</li>
+        <li>Servicios</li>
+        <li>Contacto</li>
+    </ul>
+</nav>
+
+<section class="contenido">
+    <p>Este es el contenido</p>
+</section>
+
+<footer>
+    <p>2026</p>
+</footer>
+
+</body>
+```
+
+CSS:
+
+```css
+body{
+    margin:0;
+}
+
+nav ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+.contenido{
+    padding:20px;
+}
+```
+
+---
+
+# 6. Algo que preguntan MUCHO en exámenes
+
+Cómo seleccionar elementos en CSS:
+
+| CSS       | Qué selecciona             |
+| --------- | -------------------------- |
+| `header`  | todas las etiquetas header |
+| `.menu`   | class menu                 |
+| `#inicio` | id inicio                  |
+| `nav ul`  | ul dentro de nav           |
+| `nav li`  | li dentro de nav           |
+
+---
+
+💡 **Truco fácil para el examen**
+
+Primero piensas:
+
+```
+Página
+ ├ header
+ ├ nav
+ ├ section
+ └ footer
+```
+Luego en CSS solo llamas esas partes.

@@ -1,1 +1,175 @@
+# 1. `flex-direction`
+Define **hacia dónde se acomodan los elementos**.
+## `row`
+Los elementos se acomodan **de izquierda a derecha**.
+```css
+flex-direction: row;
+```
+Ejemplo:
+```
+[A] [B] [C]
+---
 
+### `row-reverse`
+Los elementos van **de derecha a izquierda**.
+```css
+flex-direction: row-reverse;
+Ejemplo:
+```
+[C] [B] [A]
+---
+
+### `column`
+Los elementos se acomodan **de arriba hacia abajo**.
+```css
+flex-direction: column;
+```
+Ejemplo:
+[A]
+[B]
+[C]
+---
+
+### `column-reverse`
+Los elementos van **de abajo hacia arriba**.
+```css
+flex-direction: column-reverse;
+Ejemplo:
+```
+[C]
+[B]
+[A]
+---
+
+# 2. `align-items`
+Alinea los elementos **en el eje vertical** (cuando están en fila).
+## `center`
+Centra los elementos.
+```css
+align-items: center;
+```
+   [A]
+   [B]
+   [C]
+---
+
+### `flex-start`
+Los pone **arriba**.
+```css
+align-items: flex-start;
+```
+[A] [B] [C]
+```
+
+### `flex-end`
+Los pone **abajo**.
+``css
+align-items: flex-end;
+```
+      [A]
+      [B]
+      [C]
+```
+
+### `stretch`
+Los elementos **se estiran para ocupar todo el espacio**.
+```css
+align-items: stretch;
+---
+
+### `baseline`
+Alinea los elementos **según la línea del texto**.
+Se usa cuando los textos tienen **tamaños diferentes**.
+---
+
+# 3. `justify-content`
+Mueve los elementos **horizontalmente**.
+### `flex-start`
+Todo al inicio.
+```css
+justify-content: flex-start;
+```
+[A][B][C]
+---
+
+### `center`
+Todo al centro.
+```css
+justify-content: center;
+```
+   [A][B][C]
+---
+
+### `flex-end`
+Todo al final.
+```css
+justify-content: flex-end;
+```
+        [A][B][C]
+---
+
+### `space-between`
+Espacio **entre los elementos**.
+```css
+justify-content: space-between;
+```
+[A]     [B]     [C]
+---
+
+### `space-around`
+Espacio **alrededor de cada elemento**.
+```css
+justify-content: space-around;
+```
+   [A]   [B]   [C]
+---
+
+### `space-evenly`
+Espacio **exactamente igual en todos lados**.
+```css
+justify-content: space-evenly;
+---
+
+# 4. `flex-wrap`
+Controla si los elementos **saltan de línea**.
+### `nowrap`
+Todo queda en **una sola línea**.
+```css
+flex-wrap: nowrap;
+---
+
+### `wrap`
+Si no caben, **bajan a otra fila**.
+```css
+flex-wrap: wrap;
+---
+
+### `wrap-reverse`
+Bajan **pero en orden inverso**.
+```css
+flex-wrap: wrap-reverse;
+---
+
+# 5. Otras cosas útiles para mover elementos
+### `gap`
+Espacio entre elementos.
+```css
+gap: 20px;
+---
+
+### `align-self`
+Mueve **solo un elemento**.
+```css
+align-self: center;
+---
+
+### `order`
+Cambia el **orden de los elementos**.
+``css
+order: 1;
+```
+---
+# Truco fácil  🌸
+
+**Horizontal → `justify-content`**
+**Vertical → `align-items`**
